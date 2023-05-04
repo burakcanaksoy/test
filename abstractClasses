@@ -1,0 +1,46 @@
+package github.java;
+
+public class project3 {
+
+	public static void main(String[] args) {
+		KidsGameCalculate calculate = new KidsGameCalculate();
+		calculate.Calculate();
+
+	}
+
+}
+
+abstract class GameCalculate {
+
+	public abstract void Calculate();
+
+	public final void GameOver() {
+		System.out.println("game over");
+	}
+
+}
+
+class KidsGameCalculate extends GameCalculate {
+	@Override
+	public void Calculate() {
+		System.out.println("your score is 1000");
+
+	}
+}
+
+class ManGameCalcuate extends GameCalculate {
+	@Override
+	public void Calculate() {
+		System.out.println("your score is 1100");
+
+	}
+
+}
+
+class WomanGameCalculate extends GameCalculate {
+	@Override
+	public void Calculate() {
+		System.out.println("your score is 9000");
+
+	}
+}
